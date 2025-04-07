@@ -1,0 +1,324 @@
+/* Bot対戦モード - 設定画面 */
+.setupScreen {
+  max-width: 800px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.setupSection {
+  margin-bottom: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.setupSection h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.5rem;
+}
+
+.optionsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.optionCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 140px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.optionCard:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.selected {
+  background: rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.optionName {
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.optionTime {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.difficultyIndicator {
+  height: 4px;
+  border-radius: 2px;
+  margin-top: 0.5rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.startButton {
+  background: linear-gradient(90deg, #00b09b, #96c93d);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.startButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.backButton {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.backButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Bot対戦モード - ゲーム画面 */
+.gameScreen {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.gameRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.playerSection, .botSection {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.playerSection {
+  flex: 2;
+  min-width: 600px;
+}
+
+.botSection {
+  flex: 1;
+  min-width: 300px;
+}
+
+.sectionHeader {
+  background: linear-gradient(90deg, #1a237e, #283593);
+  padding: 0.8rem 1.5rem;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.gameContainer {
+  display: flex;
+  padding: 1.5rem;
+}
+
+.sidePanel {
+  width: 120px;
+}
+
+.mainBoard {
+  flex: 1;
+  margin: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.botDisplay {
+  padding: 1.5rem;
+  min-height: 400px;
+}
+
+.botThinking {
+  text-align: center;
+  color: white;
+}
+
+.thinkingAnimation {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.controls {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.controlsInfo h3 {
+  margin-top: 0;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.controlsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.controlItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.controlItem span:first-child {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+.controlItem span:last-child {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Bot対戦モード - ゲームオーバー画面 */
+.gameOverScreen {
+  max-width: 600px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.gameOverTitle {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.gameStats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.statItem {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.statLabel {
+  color: #bbb;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.statValue {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.playAgainButton {
+  background: linear-gradient(90deg, #00b09b, #96c93d);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.playAgainButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+} 

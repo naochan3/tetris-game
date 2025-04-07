@@ -1,0 +1,189 @@
+.container {
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #6b5be6;
+  color: white;
+}
+
+.header {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  margin: 0;
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+}
+
+.subtitle {
+  margin: 0.5rem 0 0;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rankingContainer {
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.rankingTable {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+}
+
+.rankingTable th,
+.rankingTable td {
+  padding: 0.75rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rankingTable th {
+  background-color: rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.rankColumn {
+  width: 80px;
+}
+
+.nameColumn {
+  text-align: left !important;
+  min-width: 150px;
+}
+
+.ratingColumn {
+  width: 120px;
+  font-weight: 600;
+}
+
+.winsColumn,
+.lossesColumn {
+  width: 100px;
+}
+
+.winRateColumn {
+  width: 100px;
+}
+
+.rankRow:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.firstRank {
+  background-color: rgba(255, 215, 0, 0.1);
+}
+
+.secondRank {
+  background-color: rgba(192, 192, 192, 0.1);
+}
+
+.thirdRank {
+  background-color: rgba(205, 127, 50, 0.1);
+}
+
+.currentPlayer {
+  background-color: rgba(33, 150, 243, 0.2);
+}
+
+.currentPlayer:hover {
+  background-color: rgba(33, 150, 243, 0.25);
+}
+
+.loading {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  color: white;
+  text-align: center;
+}
+
+.noData {
+  margin: 2rem 0;
+  text-align: center;
+  color: white;
+}
+
+.noData p {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #4c40c0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #3c32a0;
+}
+
+.footer {
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem;
+  }
+  
+  .rankingTable th,
+  .rankingTable td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .buttonContainer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .button {
+    width: 100%;
+  }
+} 
