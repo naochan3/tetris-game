@@ -1,0 +1,216 @@
+.gameScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.sidePanel {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  margin: 0 1rem;
+}
+
+.mainBoard {
+  flex: 0 0 auto;
+}
+
+.controls {
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+
+.controlsInfo h3 {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.controlsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.controlItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.controlItem span:first-child {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.pausedScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.pausedOverlay {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.pausedOverlay h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.pausedButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.resumeButton, .menuButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.resumeButton {
+  background-color: #4caf50;
+  color: white;
+}
+
+.resumeButton:hover {
+  background-color: #3e8e41;
+}
+
+.menuButton {
+  background-color: #f44336;
+  color: white;
+}
+
+.menuButton:hover {
+  background-color: #d32f2f;
+}
+
+.gameOverScreen {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gameOverTitle {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #f44336;
+  text-shadow: 0 0 10px rgba(244, 67, 54, 0.5);
+}
+
+.gameResults {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.gameStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.retryButton, .menuButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.retryButton {
+  background-color: #4caf50;
+  color: white;
+}
+
+.retryButton:hover {
+  background-color: #3e8e41;
+}
+
+@media (max-width: 768px) {
+  .gameContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sidePanel {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  
+  .gameStats {
+    grid-template-columns: 1fr;
+  }
+  
+  .buttonContainer {
+    flex-direction: column;
+  }
+} 

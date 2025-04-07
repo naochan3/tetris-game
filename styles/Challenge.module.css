@@ -1,0 +1,163 @@
+.challengeContainer {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.noticeBox {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 204, 0, 0.1);
+  border: 1px solid rgba(255, 204, 0, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.noticeIcon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.noticeText h3 {
+  margin: 0 0 0.5rem 0;
+  color: #ffcc00;
+}
+
+.noticeText p {
+  margin: 0;
+  color: #e6e6e6;
+}
+
+.challengeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.challengeCard {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.challengeCard:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.challengeIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.challengeTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.challengeDescription {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  min-height: 3em;
+}
+
+.challengeFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.difficultyBadge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.easy {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.medium {
+  background-color: #2196F3;
+  color: white;
+}
+
+.hard {
+  background-color: #FF9800;
+  color: white;
+}
+
+.extreme {
+  background-color: #F44336;
+  color: white;
+}
+
+.unknown {
+  background-color: #9C27B0;
+  color: white;
+}
+
+.highScore {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.comingSoon {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.comingSoon h3 {
+  margin-top: 0;
+  color: #4CAF50;
+}
+
+@media (max-width: 768px) {
+  .challengeGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+} 
